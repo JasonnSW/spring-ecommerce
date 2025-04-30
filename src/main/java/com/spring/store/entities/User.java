@@ -1,4 +1,4 @@
-package com.codewithmosh.store.entities;
+package com.spring.store.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -43,9 +43,6 @@ public class User {
         addresses.remove(address);
         address.setUser(null);
     }
-
-    @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
-    private Profile profile;
 
     @ManyToMany
     @JoinTable(
