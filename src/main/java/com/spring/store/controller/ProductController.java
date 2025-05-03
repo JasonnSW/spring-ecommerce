@@ -30,5 +30,4 @@ public class ProductController {
         }
         return products.stream().map(productMapper::toDto).toList();
     }
-
 }
